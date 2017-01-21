@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941151D31E3308EE00FA6AAB /* GifVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 941151D21E3308EE00FA6AAB /* GifVC.m */; };
 		9430F1581E3219F300BD2408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430F1571E3219F300BD2408 /* main.m */; };
 		9430F15B1E3219F300BD2408 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430F15A1E3219F300BD2408 /* AppDelegate.m */; };
 		9430F15E1E3219F300BD2408 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430F15D1E3219F300BD2408 /* ViewController.m */; };
@@ -14,10 +15,11 @@
 		9430F1631E3219F300BD2408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9430F1621E3219F300BD2408 /* Assets.xcassets */; };
 		9430F1661E3219F300BD2408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9430F1641E3219F300BD2408 /* LaunchScreen.storyboard */; };
 		9430F16E1E321D1C00BD2408 /* X-circle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9430F16D1E321D1C00BD2408 /* X-circle.gif */; };
-		9430F1711E32F5EC00BD2408 /* GifView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430F1701E32F5EC00BD2408 /* GifView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		941151D11E3308EE00FA6AAB /* GifVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifVC.h; sourceTree = "<group>"; };
+		941151D21E3308EE00FA6AAB /* GifVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifVC.m; sourceTree = "<group>"; };
 		9430F1531E3219F300BD2408 /* GifLaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifLaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9430F1571E3219F300BD2408 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9430F1591E3219F300BD2408 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,8 +31,6 @@
 		9430F1651E3219F300BD2408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9430F1671E3219F300BD2408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9430F16D1E321D1C00BD2408 /* X-circle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "X-circle.gif"; sourceTree = "<group>"; };
-		9430F16F1E32F5EC00BD2408 /* GifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifView.h; sourceTree = "<group>"; };
-		9430F1701E32F5EC00BD2408 /* GifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,8 @@
 				9430F16D1E321D1C00BD2408 /* X-circle.gif */,
 				9430F1591E3219F300BD2408 /* AppDelegate.h */,
 				9430F15A1E3219F300BD2408 /* AppDelegate.m */,
-				9430F16F1E32F5EC00BD2408 /* GifView.h */,
-				9430F1701E32F5EC00BD2408 /* GifView.m */,
+				941151D11E3308EE00FA6AAB /* GifVC.h */,
+				941151D21E3308EE00FA6AAB /* GifVC.m */,
 				9430F15C1E3219F300BD2408 /* ViewController.h */,
 				9430F15D1E3219F300BD2408 /* ViewController.m */,
 				9430F15F1E3219F300BD2408 /* Main.storyboard */,
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9430F15E1E3219F300BD2408 /* ViewController.m in Sources */,
-				9430F1711E32F5EC00BD2408 /* GifView.m in Sources */,
+				941151D31E3308EE00FA6AAB /* GifVC.m in Sources */,
 				9430F15B1E3219F300BD2408 /* AppDelegate.m in Sources */,
 				9430F1581E3219F300BD2408 /* main.m in Sources */,
 			);
@@ -327,6 +327,7 @@
 				9430F16C1E3219F300BD2408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
