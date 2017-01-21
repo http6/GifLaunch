@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "GifView.h"
+#import "GifVC.h"
 
 @interface AppDelegate ()
 
@@ -32,13 +32,14 @@
     
     /// 启动时加载Gif图片
     __weak AppDelegate *weakself = self;
-    GifView *view = [[GifView alloc] init];
-    [view loadGifWithName:@"X-circle" inView:self.window];
-    view.finishedBlock = ^(){
-        
+    GifVC *vc = [[GifVC alloc] init];
+    [vc loadGifWithName:@"X-circle"];
+    
+    vc.finishedBlock = ^(){
         [weakself loadGifFinished];
     };
     
+    self.window.rootViewController = vc;
     
     return YES;
 }

@@ -1,32 +1,43 @@
 //
-//  GifView.m
+//  GifVC.m
 //  GifLaunch
 //
-//  Created by hubin on 17/1/20.
+//  Created by cnmobi on 17/1/21.
 //  Copyright © 2017年 cnmobi. All rights reserved.
 //
 
-#import "GifView.h"
+#import "GifVC.h"
 
-@implementation GifView
+@interface GifVC ()
 {
     UIWebView *webView;
 }
 
+@end
+
+@implementation GifVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor clearColor];
+}
+
 /// 加载动态启动图
-- (void)loadGifWithName:(NSString *)name inView:(UIView *)superView
+- (void)loadGifWithName:(NSString *)name
 {
     CGSize size = [[UIScreen mainScreen] bounds].size;
     
 #pragma clang diagnostic ignored "-Wnonnull"
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"X-circle" ofType:@"gif"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
     NSData *gifData = [NSData dataWithContentsOfFile:path];
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     [webView loadData:gifData MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     webView.scalesPageToFit = YES;
     webView.backgroundColor = [UIColor clearColor];
     webView.opaque = NO;
-    [superView addSubview:webView];
+    [self.view addSubview:webView];
     
     /// 移除Gif的加载
     [self performSelector:@selector(removeGif) withObject:nil afterDelay:3.8];
@@ -65,5 +76,19 @@
 }
 
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
